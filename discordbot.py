@@ -1,27 +1,8 @@
 import discord
 from discord.ext import commands
-import os
-import traceback
 import asyncio
 
-bot = commands.Bot(command_prefix='/')
 client = commands.Bot(command_prefix='.')
-token = os.environ['DISCORD_BOT_TOKEN']
-
-
-@bot.event
-async def on_command_error(ctx, error):
-    orig_error = getattr(error, "original", error)
-    error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
-    await ctx.send(error_msg)
-
-
-@bot.command()
-async def ping(ctx):
-    await ctx.send('pong')
-
-bot.run(token)
-
 @client.event
 async def on_ready():
     print('Logged in as')
@@ -83,4 +64,4 @@ async def rect(ctx, about = "募集", cnt = 4, settime = 10.0):
         await msg.remove_reaction(str(reaction.emoji), user)
 
 
-client.run(token)
+client.run("NzE0MzYwMDU0NjQzNDI1Mjkw.Xs5WYg.AXTHz7mykG6zKveHEhG-BXB-Rpc")
