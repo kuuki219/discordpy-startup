@@ -3,6 +3,7 @@ from discord.ext import commands
 import asyncio
 
 client = commands.Bot(command_prefix='.')
+token = os.environ['DISCORD_BOT_TOKEN']  
 @client.event
 async def on_ready():
     print('Logged in as')
@@ -64,4 +65,4 @@ async def rect(ctx, about = "募集", cnt = 4, settime = 10.0):
         await msg.remove_reaction(str(reaction.emoji), user)
 
 
-client.run("NzE0MzYwMDU0NjQzNDI1Mjkw.Xs5WYg.AXTHz7mykG6zKveHEhG-BXB-Rpc")
+client.run(token)
