@@ -5,6 +5,7 @@ import traceback
 import asyncio
 
 client = discord.Client()
+token = os.environ['DISCORD_BOT_TOKEN'] 
 
 @client.event
 async def on_ready():
