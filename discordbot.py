@@ -7,7 +7,7 @@ import asyncio
 client = discord.Client()  
 token = os.environ['DISCORD_BOT_TOKEN']  
 
-ID_CHANNEL_README = 715173934378778697 # 該当のチャンネルのID  
+ID_CHANNEL_README = 715182446164836402 # 該当のチャンネルのID  
 ID_ROLE_WELCOME = 715183433906782316 # 付けたい役職のID  
 
 @client.event  
